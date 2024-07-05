@@ -3,8 +3,9 @@
 using namespace std;
 using namespace testing;
 
+TEST(TestCaseName, StartApplication) {
+	JusikApplication app;
 
-TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
+	EXPECT_THAT(app, NotNull());
 }
+
