@@ -121,7 +121,7 @@ TEST_F(AppFixture, SellNiceTiming) {
 	app.sellNiceTiming(STOCK_SAMPLE_2, 1);
 }
 
-TEST_F(AppFixture, buyNiceTimingIncreaseStatus) {
+TEST_F(AppFixture, SellNiceTimingDecreaseStatus) {
 	login(STOCK_BROCKER_NEMO);
 
 	EXPECT_CALL(mk, getPrice(STOCK_SAMPLE_2))
