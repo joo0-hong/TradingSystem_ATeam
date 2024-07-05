@@ -23,7 +23,7 @@ int JusikApplication::getPrice(const std::string& stock)
 	return 1;
 }
 
-void JusikApplication::buy(const std::string& stock, const int price)
+void JusikApplication::buy(const std::string& stock, const int price, const int amount)
 {
 	throwExceptionWhenNotLoggedIn();
 	throwExceptionWhenZeroPriceTrade(price);
@@ -41,7 +41,7 @@ void JusikApplication::throwExceptionWhenZeroPriceTrade(const int price)
 	}
 }
 
-void JusikApplication::sell(const std::string& stock, const int price)
+void JusikApplication::sell(const std::string& stock, const int price, const int amount)
 {
 	throwExceptionWhenZeroPriceTrade(price);
 }

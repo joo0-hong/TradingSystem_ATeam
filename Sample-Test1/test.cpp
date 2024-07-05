@@ -1,18 +1,17 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 #include "../TradingSystem/JusikApplication.cpp"
+#include "../TradingSystem/StockerBrockerDriver.h"
 
 using namespace std;
 using namespace testing;
 
-class BrockerMock : public StockBrocker {
+class BrockerMock : public StockerBrockerDriver {
 public:
-	MOCK_METHOD(void, selectStockBrocker, (string stockBrocker), (override));
-	MOCK_METHOD(void, login, (string id, string pass), (override));
-	MOCK_METHOD(int, getPrice, (string stock), (override));
-	MOCK_METHOD(void, buy, (string stock, int price, int count), (override));
-	MOCK_METHOD(void, sell, (string stock, int price, int count), (override));
-
+	MOCK_METHOD(void, logIn, (const std::string&, const std::string&), (override));
+	MOCK_METHOD(void, buyStock, (const std::string&, const int, const int), (override));
+	MOCK_METHOD(void, sellStock, (const std::string&, const int, const int), (override));
+	MOCK_METHOD(int, getPrice, (const std::string&), (override));
 protected:
 	void SetUp() {
 	}
