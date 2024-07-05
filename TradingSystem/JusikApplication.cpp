@@ -25,10 +25,6 @@ int JusikApplication::getPrice(const std::string& stock)
 
 void JusikApplication::buy(const std::string& stock, const int price)
 {
-	checkCanBuyState(price);
-}
-void JusikApplication::checkCanBuyState(const int price)
-{
 	throwExceptionWhenNotLoggedIn();
 	throwExceptionWhenZeroPriceTrade(price);
 }
