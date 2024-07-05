@@ -26,8 +26,7 @@ public:
 	}
 
 	NiceMock<BrockerMock> mk;
-	StockBrocker brocker{ mk };
-	JusikApplication app{ brocker };
+	JusikApplication app;
 };
 
 TEST(ApplicationTest, StartApplication) {
@@ -76,10 +75,7 @@ TEST_F(AppFixture, ZeroPriceSelling) {
 
 TEST_F(AppFixture, APIsCallingLogin) {
 
-	EXPECT_CALL(mk, selectStockBrocker(_))
-		.Times(1);
-
-	EXPECT_CALL(mk, login(_, _))
+	EXPECT_CALL(mk, logIn(_, _))
 		.Times(1);
 
 	login("Nemo");
