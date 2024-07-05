@@ -4,7 +4,7 @@ class LoginFailException : public std::exception {};
 class ZeroPriceTradingException : public std::exception {};
 
 JusikApplication::JusikApplication()
-	: isLoggedIn_{ false }
+	: isLoggedIn_{ false }, brocker{nullptr}
 {
 }
 

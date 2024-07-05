@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "StockerBrockerDriver.h"
 
 class JusikApplication
 {
@@ -13,6 +14,9 @@ public:
     void throwExceptionWhenNotLoggedIn();
     void throwExceptionWhenZeroPriceTrade(const int price);
     void sell(const std::string& stock, const int price, const int amount);
+
 private:
     bool isLoggedIn_;
+    StockerBrockerDriver* brocker;
+
 };
