@@ -4,7 +4,7 @@ class LoginFailException : public std::exception {};
 class ZeroPriceTradingException : public std::exception {};
 
 JusikApplication::JusikApplication()
-	: isLogedIn_{ false }
+	: isLoggedIn_{ false }
 {
 }
 
@@ -15,7 +15,7 @@ void JusikApplication::selectStockBrocker(const std::string& stockBrocker)
 
 void JusikApplication::login(const std::string& id, const std::string& pass)
 {
-	isLogedIn_ = true;
+	isLoggedIn_ = true;
 }
 
 int JusikApplication::getPrice(const std::string& stock)
@@ -34,7 +34,7 @@ void JusikApplication::checkCanBuyState(const int price)
 }
 void JusikApplication::throwExceptionWhenNotLoggedIn()
 {
-	if (isLogedIn_ == false) {
+	if (isLoggedIn_ == false) {
 		throw LoginFailException();
 	}
 }

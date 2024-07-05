@@ -15,5 +15,5 @@ public:
     void sell(const std::string& stock, const int price);
     void throwExceptionWhenZeroPriceTrade(const int price);
 private:
-    bool isLogedIn_;
+    bool isLoggedIn_;
 };
