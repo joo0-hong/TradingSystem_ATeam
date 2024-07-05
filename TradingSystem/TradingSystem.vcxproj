@@ -127,9 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="JusikApplication.cpp" />
     <ClCompile Include="KiwerAPI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NemoAPI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="JusikApplication.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
